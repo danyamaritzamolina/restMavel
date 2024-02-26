@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 /**
- *
+ * Service para las funciones de la tabla de bitacora
  * @author danya
  */
 @Service
@@ -24,17 +24,11 @@ public class ConsultaTblServiceImpl implements ConsultaTblService{
     
     @Override
     public ConsultaTbl createRow (ConsultaTbl row) {
-        System.out.println("SERVICEE..... ROW");
-        System.out.println(row);
-        System.out.print(row.getHora());
-        System.out.print(row.getUsuario());
         return consultaTblRepository.save(row);
     }
     @Override
     public ConsultaTbl getRowById(Long id){
-        System.out.println("GET ROW TABLA");
         Optional<ConsultaTbl> optionalRow = consultaTblRepository.findById(id);
-        
         return optionalRow.get();
     }
     @Override

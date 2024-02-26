@@ -10,13 +10,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 
 /**
- * Clase Controller
+ * Clase Controller para definir endpoint para la conexion entre el front y el back
  * @author danya
  */
 @RestController
@@ -36,8 +33,6 @@ public class RestApiController {
     public ResponseEntity<String> getAll( @PathVariable Long ts) {
         String result;
         result = restApiService.getAllService(ts).getBody();
-        System.out.println("GET ALLL CONTROLLER CONSULTA API");
-        System.out.println("GET ALLL CONTROLLER CONSULTA API"+result);
         return ResponseEntity.ok(result);
     }
     
@@ -50,8 +45,6 @@ public class RestApiController {
     public ResponseEntity<String> getById(@PathVariable("id") String id,  @PathVariable Long ts) {
         String result;
         result = restApiService.getByIdService(id,ts).getBody();
-        System.out.println("GET ALLL CONTROLLER CONSULTA API");
-        System.out.println("GET ALLL CONTROLLER CONSULTA API"+result);
         return ResponseEntity.ok(result);
     }
 }

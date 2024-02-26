@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- *
+ * Controller de prueba para implementacion de autenticacion
  * @author danya
  */
 @RestController

@@ -18,7 +18,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- *
+ * Controller para endpoint de peticiones para crud de tabla de bitacora 
+ * la cual almacena las consultas a la api externa
  * @author danya
  */
 @RestController

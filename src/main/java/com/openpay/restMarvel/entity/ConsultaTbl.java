@@ -24,7 +24,8 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 @NoArgsConstructor
 /**
- *
+ * Entidad para definir propiedades de la tabla de bitacora
+ * que almacena el valor timestamp para las consultas de la api externa
  * @author danya
  */
 @Component

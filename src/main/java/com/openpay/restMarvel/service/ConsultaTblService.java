@@ -8,7 +8,7 @@ import java.util.List;
 import com.openpay.restMarvel.entity.ConsultaTbl;
 
 /**
- *
+ * Service para las funciones de la tabla de bitacora
  * @author danya
  */
 public interface ConsultaTblService {

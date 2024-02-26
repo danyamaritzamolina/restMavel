@@ -20,6 +20,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * Controller del api restMarvelJar que se ubicó en este proyecto para pruebas locales sin la dependencia del jar.
+ * @author danya
+ */
 @RestController
 @RequestMapping("/api")
 @Component

@@ -4,11 +4,8 @@
  */
 package com.openpay.restMarvel.service;
 
-//import com.open.pay.restMarvelJar.controller.CharactersController;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.openpay.restMarvel.controller.ConsultaTblController;
-//import com.open.pay.restMarvelJar.RestMarvelJarApplication;
-//import com.open.pay.restMarvelJar.service.CharactersServiceImpl;
 import com.openpay.restMarvel.service.CharactersService;
 import com.openpay.restMarvel.entity.CharacterDataWrapper;
 import com.openpay.restMarvel.entity.ConsultaTbl;
@@ -18,7 +15,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-//import org.springframework.boot.ApplicationArguments;
 
 /**
  * Clase service para consulta de peticiones en la api
@@ -47,7 +43,11 @@ public class RestApiServiceImpl implements RestApiService{
         this.consultaTblController = consultaTblController1;
     }
     
-    
+    /**
+     * Metodo para consultar todos los registros de la api externa
+     * @param ts
+     * @return 
+     */
     @Override
     public ResponseEntity<String> getAllService(Long ts) {
         String result = "";
@@ -56,7 +56,12 @@ public class RestApiServiceImpl implements RestApiService{
     }
     
     
-    
+    /**
+     * Metodo para consultar personas especificos de la api externa
+     * @param id
+     * @param ts
+     * @return 
+     */
     @Override
     @Transactional
     public ResponseEntity<String> getByIdService(String id, Long ts) {
