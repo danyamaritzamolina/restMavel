@@ -3,10 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.openpay.restMarvel.repository;
-
-import com.openpay.restMarvel.entity.Usuarios;
-import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
+import com.openpay.restMarvel.entity.Authority;
+import com.openpay.restMarvel.utils.AutorityRoles;
+import java.util.Optional;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -14,7 +14,6 @@ import org.springframework.stereotype.Repository;
  * @author danya
  */
 @Repository
-public interface UsuariosRepository extends JpaRepository<Usuarios, Long>{
-    Optional<Usuarios> findByUsername(String name);
-    
+public interface AuthorityRepository extends JpaRepository<Authority, Long> {
+    Optional<Authority> findByName(AutorityRoles name);
 }

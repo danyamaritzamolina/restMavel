@@ -45,7 +45,7 @@ class RestMarvelApplicationTests {
         /**
          * Test para prueba de inserts de nuevos ts de consulta de api
          */
-        /*@DisplayName("Test POST row en tabla consultas")
+        @DisplayName("Test POST row en tabla consultas")
         @Test
         void saveRowTable() {
             ConsultaTbl row = ConsultaTbl.builder().hora("1234").build();
@@ -53,11 +53,11 @@ class RestMarvelApplicationTests {
             ConsultaTbl guardado = consultaService.createRow(row);
             Assertions.assertNotNull(guardado);
             Assertions.assertTrue(guardado.getId()!=0);
-        }*/
+        }
         /**
          * Test para probar la obtención de todos los registros insertados en la tabla ts
          */
-        /*@DisplayName("Test GET all tabla consultas")
+        @DisplayName("Test GET all tabla consultas")
         @Test
         void getAllTable() {
             consultaService.createRow(rowInicial);
@@ -65,7 +65,7 @@ class RestMarvelApplicationTests {
             List <ConsultaTbl> guardado = consultaService.getAllRows();
             Assertions.assertNotNull(guardado);
             Assertions.assertTrue(!guardado.isEmpty());
-        }*/
+        }
         
         /**
          * Test para probar reposotory
